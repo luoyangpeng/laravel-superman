@@ -12,6 +12,10 @@ class ServiceProvider extends LaravelServiceProvider
      */
     public function boot()
     {
+        $this->publishes([
+            \dirname(__DIR__).'/config/superman.php' => config_path('superman.php'),
+        ], 'config');
+        
         if ($this->app->runningInConsole()) {
             $this->commands([
                 SupermanServeCommand::class,
@@ -24,6 +28,8 @@ class ServiceProvider extends LaravelServiceProvider
      */
     public function register()
     {
-        
+        $this->mergeConfigFrom(
+            \dirname(__DIR__).'/config/superman.php', 'superman'
+        );
     }
 }
