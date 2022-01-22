@@ -75,7 +75,7 @@ class SupermanServeCommand extends Command
             }
         };
         
-        $config                               = config('server');
+        $config                               = config('superman');
         Worker::$pidFile                      = $config['pid_file'];
         Worker::$stdoutFile                   = $config['stdout_file'];
         Worker::$logFile                      = $config['log_file'];
