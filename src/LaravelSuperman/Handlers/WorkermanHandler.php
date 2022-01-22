@@ -8,8 +8,8 @@ class WorkermanHandler
 {
     public function onWorkerStart($worker)
     {
-        require __DIR__ . '/../../vendor/autoload.php';
-        require_once __DIR__.'/../../bootstrap/app.php';
+        require base_path().'/vendor/autoload.php';
+        require_once base_path().'/bootstrap/app.php';
     }
  
     // 处理客户端连接
