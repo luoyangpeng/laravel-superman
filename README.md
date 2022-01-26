@@ -4,7 +4,7 @@ Workerman speed ​​up laravel application
 ## Installation
 
 ```shell
-$ composer require "itas/superman:^1.0" -vvv
+$ composer require "itas/laravel-superman:^1.0" -vvv
 ```
 
 ## Configuration
